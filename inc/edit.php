@@ -15,3 +15,13 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
     header("Location: index.php") ;
     exit;
 }
+?>
+
+<?php include "heade.php"; ?>
+<h2>Edit Data Mahasiswa</2>
+
+<form action="" method="POST" enctype="multipart/form-data">
+
+    <label>Nama:</type>
+    <input type="text" name="nama" value="<?=$data
+
