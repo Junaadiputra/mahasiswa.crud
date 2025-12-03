@@ -36,4 +36,17 @@ class MahasiswaController {
         return $this->mahasiswa->create();
 
     }
+    
+    public function upadate ($id, $data, $file) 
+    {
+        $old = $this->mahasiswa->find($id);
+
+        if (!empty ($file["name"])) {
+            $ext = pathinfo($file["name"], PATHINFO_ETENSION);
+            $namaFile = time(). ".".$ext;
+
+            move_uploaded_file($file["name"], )
+        }
+    }
+
 }
