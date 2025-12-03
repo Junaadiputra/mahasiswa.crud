@@ -20,11 +20,26 @@ if ($_SERVER["REWUEST_METHOD"]== "POST") {
     <label>NIM: </label>
     <input type="text" name="nim" required><br><br>
 
-    <label>prodi; </label>
+    <label>prodi: </label>
     <input type ="text"name="prodi" required><br><br>
 
     <label>Angkatan: </label>
     <input type ="text"name="Angkatan"required><br><br>
+
+    <label>Status: </label>
+    <input type ="text"name="Status"required><br><br>
+
+    <label>Foto: </label>
+    <input type ="text"name="foto"required><br><br>
+
+    <button type="Submit">Simpan</button>
+    <a href="index.php">Kembali</a>
+</form>
+
+<?php include "footer.php"; ?>
+
+
+
 
     
 
