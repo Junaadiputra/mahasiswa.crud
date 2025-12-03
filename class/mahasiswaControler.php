@@ -4,9 +4,9 @@ require_once "mahasiswa.php";
 
 class MahasiswaController {
     private $db;
-    private $mahasiswa:
+    private $mahasisw ;
 
-    public fuunction __construct()
+    public function __construct()
     {
         $database= new Database();
         $this->db= $database->connect();
@@ -16,13 +16,14 @@ class MahasiswaController {
 
     public function index ()
     {
-        return $this->mahasiswa->getALL();
+        return $this->mahasiswa->getAll();
     }
-    public function store($data, $file);
+    public function store($data, $file)
     {
         $nameFIle = null;
 
-        if (!empety($file["name"])) {
+        if (!empty($file["name"])) {
+            $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
             $nameFIle = time().".". $ext;
             move_uploaded($file["tmp_name"], "../uploads/" . $nameFile); 
         }
@@ -63,6 +64,10 @@ class MahasiswaController {
 
         return $this->mahasiswa->update();
     }
-   
 
+    public function destory($id)
+    {
+        return $this->mahasiswa->delete($id);
+    }
+   
 }
