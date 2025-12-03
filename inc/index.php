@@ -47,7 +47,11 @@ $?
                     </a>
                 </td>
             </tr>
-        <
+        <?php endwhile; ?>
+    </tbody>
+</table>
+
+<?php include "footer.php"; ?>
 
 
 
