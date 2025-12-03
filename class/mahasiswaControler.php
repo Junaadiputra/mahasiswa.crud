@@ -36,6 +36,10 @@ class MahasiswaController {
         return $this->mahasiswa->create();
 
     }
+        public function edit ($id)
+        {
+            return $this->mahasiswa->find($id)
+        }
     
     public function upadate ($id, $data, $file) 
     {
