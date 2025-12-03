@@ -26,13 +26,14 @@ if ($_SERVER["REWUEST_METHOD"]== "POST") {
     <label>Angkatan: </label>
     <input type ="text"name="Angkatan"required><br><br>
 
-    <label>status: </label>
-    <input type= "text"name="status"required><br><br>
+    
 
-    <label>Foto:</label>
-    <input type= "text"name="foto" required><br><br>
 
-    <label>submit: </label>
-    <input type= "text"name="submit"required><br><br>
+
+    
+
+
+
+    
 
 
