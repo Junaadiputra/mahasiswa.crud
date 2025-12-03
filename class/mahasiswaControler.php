@@ -4,7 +4,7 @@ require_once "mahasiswa.php";
 
 class MahasiswaController {
     private $db;
-    private $mahasisw ;
+    private $mahasiswa ;
 
     public function __construct()
     {
@@ -20,11 +20,11 @@ class MahasiswaController {
     }
     public function store($data, $file)
     {
-        $nameFIle = null;
+        $nameFile = null;
 
         if (!empty($file["name"])) {
             $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
-            $nameFIle = time().".". $ext;
+            $nameFile = time().".". $ext;
             move_uploaded_file($file["tmp_name"], "../uploads/" . $nameFile); 
         }
         $this->mahasiswa->nama=$data["nama"];
@@ -32,7 +32,7 @@ class MahasiswaController {
         $this->mahasiswa->prodi=$data["prodi"];
         $this->mahasiswa->angkatan=$data["angkatan"];
         $this->mahasiswa->status=$data["status"];
-        $this->mahasiswa->foto=$data =$nameFile;
+        $this->mahasiswa->foto =$nameFile;
 
         return $this->mahasiswa->create();
 
@@ -50,9 +50,9 @@ class MahasiswaController {
             $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
             $namaFile = time(). ".".$ext;
 
-            move_uploaded_file($file["tmp_name"],"../uploads" .$nameFile) ;
+            move_uploaded_file($file["tmp_name"],"../uploads/" .$namaFile) ;
         } else {
-            $nameFile =$old["foto"];
+            $namaFile =$old["foto"];
         }
         $this->mahasiswa->id = $id;
         $this->mahasiswa->nama=$data["nama"];
@@ -60,7 +60,7 @@ class MahasiswaController {
         $this->mahasiswa->prodi=$data["prodi"];
         $this->mahasiswa->angkatan=$data["angkatan"];
         $this->mahasiswa->status=$data["status"];
-        $this->mahasiswa->foto=$data =$nameFile;
+        $this->mahasiswa->foto=$namaFile;
 
         return $this->mahasiswa->update();
     }
