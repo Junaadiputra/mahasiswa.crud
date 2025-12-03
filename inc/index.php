@@ -26,4 +26,33 @@ $?
     </thead>
 
     <tbody>
+        <?php while ($row +$data ->fetch (PDO::FETCH_ASSOC)) : ?>
+            <tr>
+                <?php if ($row["foto"] != "") : ?>
+                    <img src="../uploads/<?= $row["foto"] ?>" width="60">
+                <?php else : ?>
+                    -
+                <?php endif; ?>
+            </td>
+            <td><?=$row['nama'] ?></td>
+            <td><?=$row['nim'] ?></td>
+            <td><?=$row['prodi'] ?></td>
+            <td><?=$row['angkatan'] ?></td>
+            <td><?=$row['satus'] ?></td>
+            <td>
+                    <a href="edit.php?id=<? $row ['id'] >">Edit</a>
+                    <a href="delete.php?id=<?= $row['id'] ?>" 
+                       onclick="return confirm('Yakin ingin menghapus?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+        <
+
+
+
+                 
+            
+                        
+                    
     
