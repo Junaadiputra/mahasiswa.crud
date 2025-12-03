@@ -25,34 +25,34 @@ class MahasiswaController {
         if (!empty($file["name"])) {
             $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
             $nameFIle = time().".". $ext;
-            move_uploaded($file["tmp_name"], "../uploads/" . $nameFile); 
+            move_uploaded_file($file["tmp_name"], "../uploads/" . $nameFile); 
         }
         $this->mahasiswa->nama=$data["nama"];
         $this->mahasiswa->nim= $data["nim"];
         $this->mahasiswa->prodi=$data["prodi"];
         $this->mahasiswa->angkatan=$data["angkatan"];
         $this->mahasiswa->status=$data["status"];
-        $this->mahasiswa->foto=$data["foto"];
+        $this->mahasiswa->foto=$data =$nameFile;
 
         return $this->mahasiswa->create();
 
     }
         public function edit ($id)
         {
-            return $this->mahasiswa->find($id)
+            return $this->mahasiswa->find($id);
         }
     
-    public function upadate ($id, $data, $file) 
+    public function update ($id, $data, $file) 
     {
         $old = $this->mahasiswa->find($id);
 
         if (!empty ($file["name"])) {
-            $ext = pathinfo($file["name"], PATHINFO_ETENSION);
+            $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
             $namaFile = time(). ".".$ext;
 
-            move_uploaded_file($file["name"],"../uploads" .$nameFile) ;
+            move_uploaded_file($file["tmp_name"],"../uploads" .$nameFile) ;
         } else {
-            $nameFile =$sold["foto"];
+            $nameFile =$old["foto"];
         }
         $this->mahasiswa->id = $id;
         $this->mahasiswa->nama=$data["nama"];
@@ -60,12 +60,12 @@ class MahasiswaController {
         $this->mahasiswa->prodi=$data["prodi"];
         $this->mahasiswa->angkatan=$data["angkatan"];
         $this->mahasiswa->status=$data["status"];
-        $this->mahasiswa->foto=$data["foto"];
+        $this->mahasiswa->foto=$data =$nameFile;
 
         return $this->mahasiswa->update();
     }
 
-    public function destory($id)
+    public function destroy($id)
     {
         return $this->mahasiswa->delete($id);
     }
