@@ -1,9 +1,9 @@
 <?php
-requiere_once "../ class /mahasiswaController.php"
+require_once "../class/mahasiswaController.php";
 
 $controller = new MahasiswaController();
-$data = $controller->undex ();
-$?
+$data = $controller->index ();
+?>
 
 <?php include "header.php" ; ?>
 
@@ -26,8 +26,11 @@ $?
     </thead>
 
     <tbody>
-        <?php while ($row +$data ->fetch (PDO::FETCH_ASSOC)) : ?>
+        <?php while ($row=$data->fetch (PDO::FETCH_ASSOC)) : ?>
             <tr>
+                <td><?= $row['id'] ?></td>
+                <td>
+
                 <?php if ($row["foto"] != "") : ?>
                     <img src="../uploads/<?= $row["foto"] ?>" width="60">
                 <?php else : ?>
@@ -38,9 +41,9 @@ $?
             <td><?=$row['nim'] ?></td>
             <td><?=$row['prodi'] ?></td>
             <td><?=$row['angkatan'] ?></td>
-            <td><?=$row['satus'] ?></td>
+            <td><?=$row['status'] ?></td>
             <td>
-                    <a href="edit.php?id=<? $row ['id'] >">Edit</a>
+                    <a href="edit.php?id=<?= $row['id'] ?>">Edit</a>
                     <a href="delete.php?id=<?= $row['id'] ?>" 
                        onclick="return confirm('Yakin ingin menghapus?')">
                        Delete
