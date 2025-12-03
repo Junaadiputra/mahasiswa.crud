@@ -45,8 +45,20 @@ class MahasiswaController {
             $ext = pathinfo($file["name"], PATHINFO_ETENSION);
             $namaFile = time(). ".".$ext;
 
-            move_uploaded_file($file["name"], )
+            move_uploaded_file($file["name"],"../uploads" .$nameFile) ;
+        } else {
+            $nameFile =$sold["foto"];
         }
+        $this->mahasiswa->id = $id;
+        $this->mahasiswa->nama=$data["nama"];
+        $this->mahasiswa->nim=$data["nim"];
+        $this->mahasiswa->prodi=$data["prodi"];
+        $this->mahasiswa->angkatan=$data["angkatan"];
+        $this->mahasiswa->status=$data["status"];
+        $this->mahasiswa->foto=$data["foto"];
+
+        return $this->mahasiswa->update();
     }
+   
 
 }
