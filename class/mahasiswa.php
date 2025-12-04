@@ -10,6 +10,11 @@ class mahasiswa {
     private $foto;
 
     public function __construct($db)
+    {
+        $this->conn = $db;
+    }
+    
+    public function getAll()
     
 }
 
