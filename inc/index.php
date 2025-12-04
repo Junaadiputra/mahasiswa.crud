@@ -1,7 +1,7 @@
 <?php
-require_once "../class/mahasiswaController.php";
+require_once "../class/mahasiswaControler.php";
 
-$controller = new MahasiswaController();
+$controller = new MahasiswaControler();
 $data = $controller->index ();
 ?>
 
