@@ -7,6 +7,8 @@ $data = $controller->index ();
 
 <?php include "header.php" ; ?>
 
+
+
 <h2>Data Mahasiswa </h2> 
 
 <a href ="create.php" class="btn">+ Tambah Mahasiswa</a>
