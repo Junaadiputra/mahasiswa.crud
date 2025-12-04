@@ -2,8 +2,8 @@
 require_once "../class/mahasiswaControler.php";
 
 $controler = new MahasiswaControler();
-$id = $GET["id"];
-$data = $controler->edit($edit) ;
+$id = $_GET["id"];
+$data = $controler->edit($id) ;
 
 if (!$data) {
     echo "Data tidak ditemukan!";
@@ -11,7 +11,7 @@ if (!$data) {
 }
 
 if ($_SERVER["REQUEST_METHOD"]=== "POST") {
-    $controller->update($id, $POST, $_FILES{"foto"});
+    $controler->update($id, $_POST, $_FILES["foto"]);
     header("Location: index.php") ;
     exit;
 }
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
     <button type = "submit">Update</button>
     <a href="index.php">Kembali</a>
 
-    </form>
+ </form>
     
 
 
