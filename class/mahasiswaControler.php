@@ -2,7 +2,7 @@
 require_once "database.php" ;
 require_once "mahasiswa.php";
 
-class MahasiswaController {
+class MahasiswaControler {
     private $db;
     private $mahasiswa ;
 
