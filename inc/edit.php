@@ -38,6 +38,20 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
     <input type= "text" name="Angkattan" value="<?=$data\['status']?>" required><br><br>
 
     <label>Foto Lama:</label><br>
-    <?
+    <?php if ($data\["foto"] !=""): ?>
+        <img src="../uploads/<?=$data\['foto'] ?>" width="80"><br><br>
+    <?php else: ?>
+        Tidak ada foto<br><br>
+    <?php endif ; ?>
+
+    <label>Ganti Foto baru: </label>
+    <inpput type="file" name="foto"><br><br>
+
+    <button type = "submit">Update</button>
+    <a href="index.php">Kembali</a>
+
+    </form>
+    
+
 
 
