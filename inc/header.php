@@ -21,3 +21,12 @@
             padding: 8px 10px;
         }
         a.btn {
+             display: inline-block;
+            padding: 6px 12px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        
