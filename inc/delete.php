@@ -11,3 +11,7 @@ if (!isset($_GET["id"])) {
 $id = $_GET["id"];
 
 $controler->destroy($ID);
+
+header ("Location: index.php");
+exit;
+?>
