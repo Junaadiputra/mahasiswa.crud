@@ -33,7 +33,7 @@ h2 {
     background: #004bcc;
 }
 
-/* ===== TABLE STYLE ===== */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -57,7 +57,7 @@ table tr:hover td {
     background: #f3f7ff;
 }
 
-/* ===== ACTION BUTTON ===== */
+
 .action-btn a {
     margin-right: 10px;
     color: #0066ff;
@@ -69,7 +69,7 @@ table tr:hover td {
     text-decoration: underline;
 }
 
-/* ===== FORM STYLE ===== */
+
 form label {
     font-size: 15px;
     font-weight: 600;
@@ -108,6 +108,6 @@ footer {
     text-align: center;
     margin-top: 40px;
     color: #777;
-    
+
 }
 
