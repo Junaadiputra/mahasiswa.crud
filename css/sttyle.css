@@ -29,5 +29,85 @@ h2 {
     font-weight: 600;
     transition: 0.3s;
 }
+.btn:hover {
+    background: #004bcc;
+}
 
+/* ===== TABLE STYLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #0066ff;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+}
+
+table td {
+    padding: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+table tr:hover td {
+    background: #f3f7ff;
+}
+
+/* ===== ACTION BUTTON ===== */
+.action-btn a {
+    margin-right: 10px;
+    color: #0066ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.action-btn a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FORM STYLE ===== */
+form label {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type=text],
+form input[type=number],
+form input[type=file] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #1e7a33;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+}
 
