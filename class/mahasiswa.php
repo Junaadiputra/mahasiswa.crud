@@ -1,13 +1,7 @@
 <?php
 
-class mahasiswa {
-    private $conn;
-    private $id;
-    private $nama;
-    private $prodi;
-    private $angkatan;
-    private $status;
-    private $foto;
+class Mahasiswa {
+    
 
     public function __construct($db)
     {
@@ -71,8 +65,14 @@ class mahasiswa {
         return $stmt->execute();
     }
 
+     public function delete($id)
+    {
+        $query = "DELETE FROM mahasiswa WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id);
 
-
+        return $stmt->execute();
+    }
     
 }
 
