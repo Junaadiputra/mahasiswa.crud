@@ -12,3 +12,4 @@ class mahasiswa {
     public function __construct($db)
     
 }
+
