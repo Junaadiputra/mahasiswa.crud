@@ -1,6 +1,13 @@
 <?php
 
 class Mahasiswa {
+    private $conn;
+    public $id;         
+    public $nim;        
+    public $prodi;
+    public $angkatan;
+    public $status;
+    public $foto;
     
 
     public function __construct($db)
