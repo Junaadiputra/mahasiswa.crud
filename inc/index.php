@@ -7,7 +7,7 @@ $data = $controller->index ();
 
 <?php include "header.php" ; ?>
 
-
+<?php include "header.php"; ?>
 
 <h2>Data Mahasiswa </h2> 
 
