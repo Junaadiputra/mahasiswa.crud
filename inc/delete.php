@@ -1,16 +1,16 @@
 <?php  
-require_once "../class/mahasiswaControler,php";
+require_once "../class/mahasiswaControler.php";
 
 $controler = new MahasiswaControler();
 
 if (!isset($_GET["id"])) {
-    echo : "ID tidak ditemukan!";
+    echo "ID tidak ditemukan!";
     exit;
 }
 
 $id = $_GET["id"];
 
-$controler->destroy($ID);
+$controler->destroy($id);
 
 header ("Location: index.php");
 exit;
