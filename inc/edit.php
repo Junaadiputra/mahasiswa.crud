@@ -38,5 +38,6 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
     <input type= "text" name="Angkattan" value="<?=$data\['status']?>" required><br><br>
 
     <label>Foto Lama:</label><br>
+    <?
 
 
