@@ -2,6 +2,7 @@
 
 class Mahasiswa {
     private $conn;
+    public $nama;
     public $id;         
     public $nim;        
     public $prodi;
