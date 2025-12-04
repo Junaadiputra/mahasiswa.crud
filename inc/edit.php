@@ -23,5 +23,16 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
 <form action="" method="POST" enctype="multipart/form-data">
 
     <label>Nama:</type>
-    <input type="text" name="nama" value="<?=$data
+    <input type= "text" name="nama"value="<?= $data\['nama']?>" required><br><br>
+
+    <label>NIM:</type>
+    <input type= "text" name="Nim"value="<?= $data\['nim']?>" required><br><br>
+
+    <label>Prodi:</type>
+    <input type= "text" name="Prodi" value="<?=$data\['prodi']?>" required><br><br>
+
+    <label>Angkatan:</label>
+    <input typpe="text" name="Angkatan" value="<?=$data\['angkatan']?>" required><br><br>
+
+    <label
 
