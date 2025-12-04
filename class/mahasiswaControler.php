@@ -20,19 +20,19 @@ class MahasiswaControler {
     }
     public function store($data, $file)
     {
-        $nameFile = null;
+        $namaFile = null;
 
         if (!empty($file["name"])) {
             $ext = pathinfo($file["name"], PATHINFO_EXTENSION);
-            $nameFile = time().".". $ext;
-            move_uploaded_file($file["tmp_name"], "../uploads/" . $nameFile); 
+            $namaFile = time().".". $ext;
+            move_uploaded_file($file["tmp_name"], "../uploads/" . $namaFile); 
         }
         $this->mahasiswa->nama=$data["nama"];
         $this->mahasiswa->nim= $data["nim"];
         $this->mahasiswa->prodi=$data["prodi"];
         $this->mahasiswa->angkatan=$data["angkatan"];
         $this->mahasiswa->status=$data["status"];
-        $this->mahasiswa->foto =$nameFile;
+        $this->mahasiswa->foto =$namaFile;
 
         return $this->mahasiswa->create();
 
