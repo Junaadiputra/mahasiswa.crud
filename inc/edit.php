@@ -32,7 +32,11 @@ if ($_SERVER["REQUEST_METHOD"]=== "POST") {
     <input type= "text" name="Prodi" value="<?=$data\['prodi']?>" required><br><br>
 
     <label>Angkatan:</label>
-    <input typpe="text" name="Angkatan" value="<?=$data\['angkatan']?>" required><br><br>
+    <input type="text" name="Angkatan" value="<?=$data\['angkatan']?>" required><br><br>
 
-    <label
+    <label>Status:</label>
+    <input type= "text" name="Angkattan" value="<?=$data\['status']?>" required><br><br>
+
+    <label>Foto Lama:</label><br>
+
 
