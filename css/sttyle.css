@@ -85,4 +85,23 @@ table tr:hover td {
     margin-right: 10px;
 }
 
+/* Form input */
+form input[type=text],
+form input[type=number],
+form input[type=file] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cdd3f5;
+    border-radius: 8px;
+    background: #f7f8ff;
+    font-size: 15px;
+}
+
+form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
 

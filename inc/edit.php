@@ -3,55 +3,58 @@ require_once "../class/mahasiswaControler.php";
 
 $controler = new MahasiswaControler();
 $id = $_GET["id"];
-$data = $controler->edit($id) ;
+$data = $controler->edit($id);
 
 if (!$data) {
     echo "Data tidak ditemukan!";
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"]=== "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $controler->update($id, $_POST, $_FILES["foto"]);
-    header("Location: index.php") ;
+    header("Location: index.php");
     exit;
 }
 ?>
 
 <?php include "header.php"; ?>
-<h2>Edit Data Mahasiswa</h2>
 
-<form action="" method="POST" enctype="multipart/form-data">
+<div class="container">
 
-    <label>Nama:</label>
-    <input type= "text" name="nama"value="<?= $data['nama']?>" required><br><br>
+    <h2>Edit Data Mahasiswa</h2>
 
-    <label>NIM:</label>
-    <input type= "text" name="nim"value="<?= $data['nim']?>" required><br><br>
+    <form action="" method="POST" enctype="multipart/form-data">
 
-    <label>Prodi:</label>
-    <input type= "text" name="prodi" value="<?=$data['prodi']?>" required><br><br>
+        <label>Nama:</label>
+        <input type="text" name="nama" value="<?= $data['nama'] ?>" required>
 
-    <label>Angkatan:</label>
-    <input type="text" name="angkatan" value="<?=$data['angkatan']?>" required><br><br>
+        <label>NIM:</label>
+        <input type="text" name="nim" value="<?= $data['nim'] ?>" required>
 
-    <label>Status:</label>
-    <input type= "text" name="status" value="<?=$data['status']?>" required><br><br>
+        <label>Prodi:</label>
+        <input type="text" name="prodi" value="<?= $data['prodi'] ?>" required>
 
-    <label>Foto Lama:</label><br>
-   <?php if ($data["foto"] != ""): ?>
-        <img src="../uploads/<?=$data['foto'] ?>" width="80"><br><br>
-    <?php else: ?>
-        Tidak ada foto<br><br>
-    <?php endif ; ?>
+        <label>Angkatan:</label>
+        <input type="number" name="angkatan" value="<?= $data['angkatan'] ?>" required>
 
-    <label>Ganti Foto baru: </label>
-    <input type="file" name="foto"><br><br>
+        <label>Status:</label>
+        <input type="text" name="status" value="<?= $data['status'] ?>" required>
 
-    <button type = "submit">Update</button>
-    <a href="index.php">Kembali</a>
+        <label>Foto Lama:</label><br>
+        <?php if ($data["foto"]): ?>
+            <img src="../uploads/<?= $data['foto'] ?>" width="90" style="border-radius:8px; margin-bottom:10px;">
+        <?php else: ?>
+            Tidak ada foto
+        <?php endif; ?>
 
- </form>
-    
+        <label>Ganti Foto Baru:</label>
+        <input type="file" name="foto">
 
+        <button type="submit" class="btn-primary">Update</button>
+        <a href="index.php" class="btn-secondary">Kembali</a>
 
+    </form>
 
+</div>
+
+<?php include "footer.php"; ?>
